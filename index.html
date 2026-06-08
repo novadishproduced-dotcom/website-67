@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novadish</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+background:url('background.jpg') center/cover no-repeat fixed;
+color:white;
+}
+
+.overlay{
+position:fixed;
+inset:0;
+background:black;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:9999;
+cursor:pointer;
+}
+
+.overlay h1{
+font-size:4rem;
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
+
+.card{
+width:430px;
+background:rgba(0,0,0,0.68);
+backdrop-filter:blur(14px);
+border-radius:25px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 0 40px rgba(153,0,255,0.6);
+}
+
+.banner{
+height:180px;
+background:url('background.jpg') center/cover;
+}
+
+.content{
+padding:20px;
+margin-top:-70px;
+}
+
+.pfp{
+width:120px;
+height:120px;
+border-radius:24px;
+border:5px solid #111;
+object-fit:cover;
+}
+
+.name{
+font-size:2rem;
+font-weight:bold;
+margin-top:10px;
+}
+
+.user{
+opacity:0.7;
+margin-bottom:15px;
+}
+
+.bio{
+line-height:1.5;
+margin-top:15px;
+}
+
+.activity{
+margin-top:20px;
+background:rgba(255,255,255,0.08);
+padding:15px;
+border-radius:18px;
+}
+
+.row{
+display:flex;
+align-items:center;
+gap:12px;
+margin-top:10px;
+}
+
+.activityImg{
+width:70px;
+height:70px;
+border-radius:16px;
+object-fit:cover;
+}
+
+.green{
+color:#57F287;
+}
+
+.small{
+font-size:0.9rem;
+opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay" id="overlay">
+<h1>CLICK / TAP TO ENTER</h1>
+<p>novadish</p>
+</div>
+
+<audio id="music"></audio>
+
+<div class="card">
+
+<div class="banner"></div>
+
+<div class="content">
+
+<img class="pfp" src="pfp.png">
+
+<div class="name">Loading...</div>
+<div class="user">@loading</div>
+
+<div class="bio">
+Loading bio...
+</div>
+
+<div class="activity">
+
+<div class="small">Playing</div>
+
+<div class="row">
+
+<img src="pfp.png" class="activityImg">
+
+<div>
+<div class="activityTitle">Loading...</div>
+<div class="green">● Online</div>
+<div class="activityDesc">Loading activity...</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
