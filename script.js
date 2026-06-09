@@ -1,7 +1,7 @@
 const overlay = document.getElementById('overlay');
 const music = document.getElementById('music');
 
-const songs = ['music.mp3','loveme.mp3'];
+const songs = ['novaprod.mp3','music.mp3','loveme.mp3'];
 
 let current = 0;
 
